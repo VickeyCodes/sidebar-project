@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Slideshow</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation sidebar" aria-expanded="false">
+        <div class="hamburger-icon">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+    </button>
+
+    <!-- Main Sidebar -->
+    <aside class="sidebar" id="sidebar" role="navigation" aria-label="Main navigation">
+        <div class="sidebar-content">
+            <!-- Logo Section -->
+            <header class="sidebar-header">
+                <div class="logo-container">
+                    <img src="Assets/logo.png" alt="Company Logo" class="logo-image" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-placeholder" style="display: none;">
+                        <span class="logo-text">LOGO</span>
+                    </div>
+                </div>
+                <h2 class="brand-name">Kointos</h2>
+            </header>
+
+            <!-- Navigation Menu -->
+            <nav class="sidebar-nav" role="navigation">
+                <ul class="nav-list" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="home.html" class="nav-link active" role="menuitem" tabindex="0" 
+                           data-page="home" aria-current="page">
+                            <span class="nav-icon" aria-hidden="true">
+                                <img src="Assets/home.png" alt="" class="nav-icon-image" 
+                                     onerror="this.style.display='none'; this.parentElement.innerHTML='🏠';">
+                            </span>
+                            <span class="nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="slides.html" class="nav-link" role="menuitem" tabindex="-1" data-page="slides">
+                            <span class="nav-icon" aria-hidden="true">
+                                <img src="Assets/slides.png" alt="" class="nav-icon-image" 
+                                     onerror="this.style.display='none'; this.parentElement.innerHTML='📊';">
+                            </span>
+                            <span class="nav-text">Slides</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="about.html" class="nav-link" role="menuitem" tabindex="-1" data-page="about">
+                            <span class="nav-icon" aria-hidden="true">
+                                <img src="Assets/about.png" alt="" class="nav-icon-image" 
+                                     onerror="this.style.display='none'; this.parentElement.innerHTML='ℹ️';">
+                            </span>
+                            <span class="nav-text">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="contact.html" class="nav-link" role="menuitem" tabindex="-1" data-page="contact">
+                            <span class="nav-icon" aria-hidden="true">
+                                <img src="Assets/contact.png" alt="" class="nav-icon-image" 
+                                     onerror="this.style.display='none'; this.parentElement.innerHTML='📧';">
+                            </span>
+                            <span class="nav-text">Contact</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="settings.html" class="nav-link" role="menuitem" tabindex="-1" data-page="settings">
+                            <span class="nav-icon" aria-hidden="true">
+                                <img src="Assets/settings.png" alt="" class="nav-icon-image" 
+                                     onerror="this.style.display='none'; this.parentElement.innerHTML='⚙️';">
+                            </span>
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <footer class="sidebar-footer">
+                <div class="sidebar-info">
+                    <p class="version-info"> v0.0.1</p>
+                    <p class="copyright">&copy; 2025</p>
+                </div>
+            </footer>
+        </div>
+    </aside>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content" id="mainContent" role="main">
+        <div class="content-wrapper">
+            <!-- Welcome Section -->
+            <section class="slide active-slide" id="slide1" data-slide="home">
+                <div class="slide-container">
+                    <div class="slide-header">
+                        <h1 class="slide-title">Collapsible Sidebar</h1>
+                        <p class="slide-subtitle">Modern, responsive design with smooth animations</p>
+                    </div>
+                    <div class="slide-content">
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🎨</div>
+                                <h3>Modern Design</h3>
+                                <p>Clean and professional interface with smooth animations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📱</div>
+                                <h3>Fully Responsive</h3>
+                                <p>Perfect experience on desktop, tablet, and mobile devices</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h3>Fast Performance</h3>
+                                <p>Optimized for speed with minimal resource usage</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">♿</div>
+                                <h3>Accessible</h3>
+                                <p>Full keyboard navigation and screen reader support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Additional Slides for Demo -->
+            <section class="slide" id="slide2" data-slide="slides">
+                <div class="slide-container">
+                    <h1 class="slide-title">Slides Section</h1>
+                    <p class="slide-subtitle"></p>
+                </div>
+            </section>
+
+            <section class="slide" id="slide3" data-slide="about">
+                <div class="slide-container">
+                    <h1 class="slide-title">About Section</h1>
+                    <p class="slide-subtitle"></p>
+                </div>
+            </section>
+
+            <section class="slide" id="slide4" data-slide="contact">
+                <div class="slide-container">
+                    <h1 class="slide-title">Contact Section</h1>
+                    <p class="slide-subtitle"></p>
+                </div>
+            </section>
+
+            <section class="slide" id="slide5" data-slide="settings">
+                <div class="slide-container">
+                    <h1 class="slide-title">Settings Section</h1>
+                    <p class="slide-subtitle"></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
